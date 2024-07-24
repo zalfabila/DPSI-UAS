@@ -1,0 +1,525 @@
+{
+	"info": {
+		"_postman_id": "0de33f89-8231-48e9-ae2a-c67dbd6bf0b6",
+		"name": "bila",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36583903"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"admin\",\r\n    \"password\" : \"admin\",\r\n    \"role\" : \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wisata-1w38y03pc-zalfabilas-projects.vercel.app//auth/register",
+					"protocol": "https",
+					"host": [
+						"wisata-1w38y03pc-zalfabilas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"admin\",\r\n    \"password\" : \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wisata-1w38y03pc-zalfabilas-projects.vercel.app/auth/login",
+					"protocol": "https",
+					"host": [
+						"wisata-1w38y03pc-zalfabilas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post paket",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3ODUwMDAsImV4cCI6MTcyMTc4ODYwMH0.1xR_krePlirJBYYwpF7R2zSK6XinHIeI9AvbwbnUnsU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"namaPaket\" : \"Paket 4\", \"deskripsi\" : \"liburan Ultimate\", \"harga\" : 2000000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wisata-1w38y03pc-zalfabilas-projects.vercel.app/paket",
+					"protocol": "https",
+					"host": [
+						"wisata-1w38y03pc-zalfabilas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"paket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get paket",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3ODUwMDAsImV4cCI6MTcyMTc4ODYwMH0.1xR_krePlirJBYYwpF7R2zSK6XinHIeI9AvbwbnUnsU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://wisata-1w38y03pc-zalfabilas-projects.vercel.app/paket",
+					"protocol": "https",
+					"host": [
+						"wisata-1w38y03pc-zalfabilas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"paket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "up paket",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3ODUwMDAsImV4cCI6MTcyMTc4ODYwMH0.1xR_krePlirJBYYwpF7R2zSK6XinHIeI9AvbwbnUnsU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"namaPaket\" : \"Paket 4\", \"deskripsi\" : \"liburan Supermewah\", \"harga\" : 5000000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wisata-1w38y03pc-zalfabilas-projects.vercel.app/paket/4:paketID",
+					"protocol": "https",
+					"host": [
+						"wisata-1w38y03pc-zalfabilas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"paket",
+						"4:paketID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del paket",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3ODUwMDAsImV4cCI6MTcyMTc4ODYwMH0.1xR_krePlirJBYYwpF7R2zSK6XinHIeI9AvbwbnUnsU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://wisata-1w38y03pc-zalfabilas-projects.vercel.app/paket/4:paketID",
+					"protocol": "https",
+					"host": [
+						"wisata-1w38y03pc-zalfabilas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"paket",
+						"4:paketID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post destinasi",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3ODUwMDAsImV4cCI6MTcyMTc4ODYwMH0.1xR_krePlirJBYYwpF7R2zSK6XinHIeI9AvbwbnUnsU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"destinasi\" : \"Waduk Sermo\", \"deskripsi\" : \"Waduk yang di buat belanda\" , \"paketID\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wisata-1w38y03pc-zalfabilas-projects.vercel.app/destination",
+					"protocol": "https",
+					"host": [
+						"wisata-1w38y03pc-zalfabilas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"destination"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get destinasi",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3ODUwMDAsImV4cCI6MTcyMTc4ODYwMH0.1xR_krePlirJBYYwpF7R2zSK6XinHIeI9AvbwbnUnsU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://wisata-1w38y03pc-zalfabilas-projects.vercel.app/destination",
+					"protocol": "https",
+					"host": [
+						"wisata-1w38y03pc-zalfabilas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"destination"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "up destinasi",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3ODUwMDAsImV4cCI6MTcyMTc4ODYwMH0.1xR_krePlirJBYYwpF7R2zSK6XinHIeI9AvbwbnUnsU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"destinasi\" : \"Waduk Sermo\", \"deskripsi\" : \"Lupa deng siapa yang bikin\" , \"paketID\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wisata-1w38y03pc-zalfabilas-projects.vercel.app/destination/2:destinationID",
+					"protocol": "https",
+					"host": [
+						"wisata-1w38y03pc-zalfabilas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"destination",
+						"2:destinationID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del destinasi",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3ODUwMDAsImV4cCI6MTcyMTc4ODYwMH0.1xR_krePlirJBYYwpF7R2zSK6XinHIeI9AvbwbnUnsU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://wisata-1w38y03pc-zalfabilas-projects.vercel.app/destination/2:destinationID",
+					"protocol": "https",
+					"host": [
+						"wisata-1w38y03pc-zalfabilas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"destination",
+						"2:destinationID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post pesanan",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"paketID\" : 1, \"userID\" : 1, \"Quantity\" : 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wisata-1w38y03pc-zalfabilas-projects.vercel.app/pesanan",
+					"protocol": "https",
+					"host": [
+						"wisata-1w38y03pc-zalfabilas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"pesanan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get pesanan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://wisata-fbjvuwgn4-zalfabilas-projects.vercel.app//pesanan",
+					"protocol": "https",
+					"host": [
+						"wisata-fbjvuwgn4-zalfabilas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"",
+						"pesanan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "up pesanan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3ODUwMDAsImV4cCI6MTcyMTc4ODYwMH0.1xR_krePlirJBYYwpF7R2zSK6XinHIeI9AvbwbnUnsU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"paketID\" : 1, \"userID\" : 1, \"Quantity\" : 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wisata-fbjvuwgn4-zalfabilas-projects.vercel.app/pesanan/1:pesananID",
+					"protocol": "https",
+					"host": [
+						"wisata-fbjvuwgn4-zalfabilas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"pesanan",
+						"1:pesananID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del pesanan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3ODU2NTQsImV4cCI6MTcyMTc4OTI1NH0.lQnI4GW8Z0xR20DeJ-_H8LQwwDqETkFsLZo3-XG9iiw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"paketID\" : 1, \"userID\" : 1, \"Quantity\" : 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wisata-fbjvuwgn4-zalfabilas-projects.vercel.app/pesanan/2:pesananID",
+					"protocol": "https",
+					"host": [
+						"wisata-fbjvuwgn4-zalfabilas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"pesanan",
+						"2:pesananID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get transaksi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://wisata-fbjvuwgn4-zalfabilas-projects.vercel.app/transaksi",
+					"protocol": "https",
+					"host": [
+						"wisata-fbjvuwgn4-zalfabilas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"transaksi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bayar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://wisata-fbjvuwgn4-zalfabilas-projects.vercel.app/transaksi/1:transaksiID",
+					"protocol": "https",
+					"host": [
+						"wisata-fbjvuwgn4-zalfabilas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"transaksi",
+						"1:transaksiID"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
